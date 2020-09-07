@@ -1,0 +1,49 @@
+server:
+  port: 9098
+
+spring:
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure  # 为了某些版本的springboot  @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class}) 无法生效
+  datasource:
+    dynamic:
+      primary: biSqlServer
+      datasource:
+        biSqlServer:
+          url: jdbc:sqlserver://172.17.1.206:1433;database=PT_BI_BIGZ_CSYL
+          username: sa
+          password: c406a055
+          driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      #        ptGreeplum:
+      #          url: jdbc:postgresql://172.17.0.136:5432/PT_SJZX
+      #          username: gpadmin
+      #          password: gpadmin
+      #          driverClassName: org.postgresql.Driver
+      initial-size: 10 # 以下是连接池配置
+      max-active: 100
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      #validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: druid
+        login-password: druid
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: false
+        wall:
+          config:
+            multi-statement-allow: true
+python:
+  upload:
+    root-dir: D:\\files\\python\\
+

@@ -6,5 +6,5 @@ package com.gaga.fetch;
  * @description：TODO
  * @version: 1.0
  */
-public abstract class AbstractFetch implements Fetch {
+public abstract class AbstractDataFetch implements DataFetch {
 }

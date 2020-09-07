@@ -43,7 +43,4 @@ spring:
         wall:
           config:
             multi-statement-allow: true
-python:
-  upload:
-    root-dir: D:\\files\\python\\
 

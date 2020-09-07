@@ -45,7 +45,7 @@ mybatis-plus:
       #逻辑未删除值
       logic-not-delete-value: 1
       #数据量类型
-      db-type: SQL_SERVER
+      db-type: MYSQL
 
 logging:
   config: classpath:logback.xml

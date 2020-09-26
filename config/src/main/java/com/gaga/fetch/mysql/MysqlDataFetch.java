@@ -8,4 +8,9 @@ import com.gaga.fetch.AbstractDataFetch;
  * @version: 1.0
  */
 public class MysqlDataFetch extends AbstractDataFetch {
+
+    public MysqlDataFetch(int coreSize) {
+        this.coreSize = coreSize;
+    }
+
 }

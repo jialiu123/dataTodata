@@ -21,7 +21,7 @@ import java.util.Properties;
  * @version: 1.0
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@MapperScan("com.winning.mapper")
+@MapperScan("com.gaga.mapper")
 @Slf4j
 @EnableAsync
 public class ConfigApplication {

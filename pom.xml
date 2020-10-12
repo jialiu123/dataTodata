@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>config</module>
+        <module>test</module>
     </modules>
 
     <groupId>com.gaga</groupId>

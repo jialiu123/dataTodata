@@ -2,7 +2,7 @@ package com.gaga.designPatterns.factory;
 
 /**
  * @author ：liujia
- * @date ：Created in 2020/10/10 16:24
+ * @date ：Created in 2020/10/10 16:25
  * @description：工厂模式
  * @version: 1.0
  */

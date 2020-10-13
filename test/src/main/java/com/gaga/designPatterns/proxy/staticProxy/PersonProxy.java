@@ -5,15 +5,15 @@ package com.gaga.designPatterns.proxy.staticProxy;
  * @date ：Created in 2020/10/10 17:15
  * @version: 1.0
  */
-public class StudentProxy {
+public class PersonProxy {
 
-    private Student student;
+    private Person person;
 
-    public StudentProxy(Student student) {
-        this.student = student;
+    public PersonProxy(Person person) {
+        this.person = person;
     }
 
     public void play() {
-        student.play();
+        person.play();
     }
 }

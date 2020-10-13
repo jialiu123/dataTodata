@@ -1,4 +1,4 @@
-package com.gaga.designPatterns.proxy.staticProxy;
+package com.gaga.designPatterns.proxy.dynamicProxy;
 
 /**
  * @author ：liujia

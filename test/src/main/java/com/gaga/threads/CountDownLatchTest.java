@@ -6,6 +6,13 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * CountDownLatch主要有两个方法，countDown()和await()方法，
+ * 在创建CountDownLatch对象时候，初始值与调用countDown()次数相等后，
+ * 调用await()方法的线程才会运行，这样就可以主线程在别的线程执行完了后，才结束。
+ * <p>
+ * 使用场景：可以分别创建新的线程单独处理一个子任务，当全部的子任务都处理完毕后，
+ * 主线程进行汇总，各个分线程调用一次countDown()方法，主线程调用await()方法
+ *
  * @author ：liujia
  * @date ：Created in 2020/9/9 15:32
  * @version: 1.0

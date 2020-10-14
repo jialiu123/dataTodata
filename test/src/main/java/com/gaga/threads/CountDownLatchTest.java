@@ -40,7 +40,7 @@ public class CountDownLatchTest {
                 }
                 end.countDown();
 
-            }, "现场" + i).start();
+            }, "线程" + i).start();
         }
 
         end.await();

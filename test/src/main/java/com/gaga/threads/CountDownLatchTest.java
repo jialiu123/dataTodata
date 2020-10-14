@@ -38,11 +38,13 @@ public class CountDownLatchTest {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                end.countDown();
+
             }, "现场" + i).start();
         }
 
         end.await();
-        System.out.println("Game Over.");
+        log.info("Game Over.");
     }
 
     public static void testCountDownLatch2() throws Exception {

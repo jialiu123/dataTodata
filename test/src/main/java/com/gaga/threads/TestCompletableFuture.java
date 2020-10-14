@@ -72,6 +72,12 @@ public class TestCompletableFuture {
 
     }
 
+    /**
+     * 主要完成线程池执行多个任务使用CompletableFuture
+     *
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     public static void test4() throws ExecutionException, InterruptedException {
 
         List<CompletableFuture<Integer>> futureList = new ArrayList<>();

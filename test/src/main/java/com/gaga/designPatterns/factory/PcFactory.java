@@ -1,21 +1,22 @@
 package com.gaga.designPatterns.factory;
 
 /**
+ * 工厂模式是用来创建对象的
+ *
  * @author ：liujia
  * @date ：Created in 2020/10/10 17:07
- * @description：TODO
  * @version: 1.0
  */
 public class PcFactory {
 
-    //感觉有点像静态代理
-    private Pc pc;
+    public static Pc PcFactory(int type) {
+        if (type == 1) {
+            return new MacPc();
+        } else if (type == 2) {
+            return new WindowPc();
+        }
 
-    public PcFactory(Pc pc) {
-        this.pc = pc;
+        return null;
     }
 
-    public void make() {
-        pc.make();
-    }
 }

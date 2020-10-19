@@ -49,14 +49,17 @@ public class StreamTest {
         studentList.stream().collect(Collectors.toList());
 
 
-        //先造一个flatMap数据吧
-        List<String> wordCountList = Arrays.asList("abc", "bcd", "aca");
+//        //先造一个flatMap数据吧
+        List<List<String>> wordCountList = Arrays.asList(
+                Arrays.asList("abc", "bcd", "aca"),
+                Arrays.asList("abc", "bcd", "aca")
+        );
 
-        log.info("===================collect============");
+        log.info("===================collect============" + wordCountList.size());
         //collect 收集数据
-//        wordCountList.stream().flatMap(item -> {
-//            return item.getAge() + 10;
-//        });
+        wordCountList.stream().flatMap(item -> {
+            return item.stream().map(y -> y.replace("鸡", "煎"));
+        }).forEach(x -> System.out.println(x));
 
 
     }

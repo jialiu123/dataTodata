@@ -9,8 +9,8 @@ package com.gaga.designPatterns.factory;
 public class FactoryTest {
 
     public static void main(String[] args) {
-        PcFactory pcFactory = new PcFactory(new MacPc());
-        pcFactory.make();
+        Pc pc = PcFactory.PcFactory(1);
+        pc.make();
     }
 
 }

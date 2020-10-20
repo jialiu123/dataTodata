@@ -25,6 +25,10 @@ public class StreamTest {
 
     public static void main(String[] args) {
 
+
+//        Object[] nameArrays = studentList.stream().map((item) -> item.getName()).collect(Collectors.toList()).toArray();
+
+
         log.info("================forEach===============");
         //forEach 接收一个参数，只是循环没有返回值
         // 底层实现Consumer<T>：消费型接口（void accept(T t)）

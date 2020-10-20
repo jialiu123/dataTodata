@@ -19,12 +19,19 @@ public class DynamicProxyTest {
 
     public static void main(String[] args) {
 
+
         Person person = new Student();
 
         InvocationHandler handler = new JdkProxyHandler(person);
 
-        Person proxyStudent = (Person) Proxy.newProxyInstance(person.getClass().getClassLoader(), person.getClass().getInterfaces(), handler);
+//        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+//        Person proxyStudent2 = (Person) Proxy.newProxyInstance(loader, person.getClass().getInterfaces(), handler);
+//
+//        System.out.println(person.toString());
+//        System.out.println(proxyStudent2.toString());
 
+
+        Person proxyStudent = (Person) Proxy.newProxyInstance(person.getClass().getClassLoader(), person.getClass().getInterfaces(), handler);
         proxyStudent.play();
 
 

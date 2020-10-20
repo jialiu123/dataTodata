@@ -20,6 +20,5 @@ public class CglibProxy implements MethodInterceptor {
         methodProxy.invokeSuper(object, objects);
         System.out.println("After invoke " + method.getName());
         return null;
-
     }
 }

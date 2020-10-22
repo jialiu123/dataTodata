@@ -43,10 +43,10 @@ public class ImageSizeFilter extends OncePerRequestFilter {
         //可以使用工厂模式 并且使用工程使用面向接口编程
         if (return_url.contains("@s")) {
             CutImageHandle cutImageHandle = new CutImageHandle(return_url, uploadPath);
-            desc = cutImageHandle.handle(IMAGE_EXT);
+            desc = cutImageHandle.handle();
         } else if (return_url.endsWith("@compress")) {
             CompressImageHandle compressImageHandle = new CompressImageHandle(return_url, uploadPath);
-            desc = compressImageHandle.handle(IMAGE_EXT);
+            desc = compressImageHandle.handle();
         }
 
         FileInputStream fis = null;
@@ -90,7 +90,7 @@ public class ImageSizeFilter extends OncePerRequestFilter {
         }
 
 
-        public String handle(String IMAGE_EXT) {
+        public String handle() {
 
             if (IMAGE_EXT.toLowerCase().contains(FileUtil.extName(source).toLowerCase())) {
 
@@ -143,7 +143,7 @@ public class ImageSizeFilter extends OncePerRequestFilter {
         }
 
 
-        public String handle(String IMAGE_EXT) {
+        public String handle() {
 
             if (IMAGE_EXT.toLowerCase().contains(FileUtil.extName(source).toLowerCase())) {
                 try {

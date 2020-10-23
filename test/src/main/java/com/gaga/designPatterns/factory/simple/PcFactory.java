@@ -1,4 +1,8 @@
-package com.gaga.designPatterns.factory;
+package com.gaga.designPatterns.factory.simple;
+
+import com.gaga.designPatterns.factory.MacPc;
+import com.gaga.designPatterns.factory.Pc;
+import com.gaga.designPatterns.factory.WindowPc;
 
 /**
  * 工厂模式是用来创建对象的

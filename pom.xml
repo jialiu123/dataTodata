@@ -7,6 +7,7 @@
     <modules>
         <module>config</module>
         <module>test</module>
+        <module>commons</module>
     </modules>
 
     <groupId>com.gaga</groupId>

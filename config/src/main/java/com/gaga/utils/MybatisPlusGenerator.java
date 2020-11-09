@@ -46,7 +46,7 @@ public class MybatisPlusGenerator {
 
         // dataSource配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDbType(DbType.SQL_SERVER);
+        dsc.setDbType(DbType.MYSQL);
         dsc.setUrl(rb.getString("url"));
         dsc.setDriverName(rb.getString("driverName"));
         dsc.setUsername(rb.getString("userName"));

@@ -23,7 +23,7 @@ public class CyclicBarrierTest {
 
     public static void testCountDownLatch() throws Exception {
 
-        final CyclicBarrier end = new CyclicBarrier(10, new Thread(() -> {
+        final CyclicBarrier end = new CyclicBarrier(3, new Thread(() -> {
             log.info("执行结束啦");
         }));
 

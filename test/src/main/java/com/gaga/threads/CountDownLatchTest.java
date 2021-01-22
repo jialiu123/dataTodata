@@ -27,7 +27,7 @@ public class CountDownLatchTest {
 
     public static void testCountDownLatch() throws Exception {
 
-        final CountDownLatch end = new CountDownLatch(10);
+        final CountDownLatch end = new CountDownLatch(3);
 
         for (int i = 0; i < 10; i++) {
             int finalI = i;

@@ -44,9 +44,7 @@ public class StreamTest {
         log.info("===================filter============");
         //filter 过滤数据
         // 底层实现 Predicate<T>：断言型接口
-        studentList.stream().filter(item -> {
-            return item.getAge() > 22;
-        }).forEach(item -> log.info(item.toString()));
+        studentList.stream().filter(item -> item.getAge() > 22).forEach(item -> log.info(item.toString()));
 
         log.info("===================collect============");
         //collect 收集数据
@@ -61,9 +59,9 @@ public class StreamTest {
 
         log.info("===================collect============" + wordCountList.size());
         //collect 收集数据
-        wordCountList.stream().flatMap(item -> {
-            return item.stream().map(y -> y.replace("鸡", "煎"));
-        }).forEach(x -> System.out.println(x));
+        wordCountList.stream()
+                .flatMap(item -> item.stream().map(y -> y.replace("鸡", "煎")))
+                .forEach(x -> System.out.println(x));
 
 
     }

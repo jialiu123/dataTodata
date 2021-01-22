@@ -22,7 +22,7 @@ public class CountDownLatchTest {
 
 
     public static void main(String[] args) throws Exception {
-        testCountDownLatch();
+        testCountDownLatch2();
     }
 
     public static void testCountDownLatch() throws Exception {

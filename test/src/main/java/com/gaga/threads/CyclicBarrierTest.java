@@ -23,9 +23,9 @@ public class CyclicBarrierTest {
 
     public static void testCountDownLatch() throws Exception {
 
-        final CyclicBarrier end = new CyclicBarrier(3, new Thread(() -> {
-            log.info("执行结束啦");
-        }));
+        final CyclicBarrier end = new CyclicBarrier(3, new Thread(() ->
+                log.info("执行结束啦")
+        ));
 
         for (int i = 0; i < 10; i++) {
             int finalI = i;

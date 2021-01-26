@@ -34,6 +34,7 @@ public class ByteBuffterTest {
         ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(1024 * 1024 * 10);
 
         System.out.println("使用直接内存");
+
         System.out.println(Runtime.getRuntime().freeMemory());
     }
 

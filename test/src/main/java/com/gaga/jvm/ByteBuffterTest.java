@@ -13,6 +13,9 @@ import java.nio.ByteBuffer;
  * <p>
  * 底层实现是借助Unsafe中的分配内存和释放内存方法
  * 释放内存是通过虚引用Cleaner类 JVM会主动调用clean方法 然后在调用现场Deallocator中的run方法 释放内存
+ * <p>
+ * 对于直接内存这一块 我在想如果做数据抽取 是否可以直接使用这种方式，
+ * 比如读取数据流，然后写到直接内存，直接操作避免JVM溢出问题
  *
  * @author ：liujia
  * @date ：Created in 2021/1/26 13:42

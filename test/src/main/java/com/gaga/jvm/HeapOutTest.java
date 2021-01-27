@@ -22,7 +22,6 @@ public class HeapOutTest {
         for (int i = 0; i < 100; i++) {
             studentList.add(new Student());
         }
-
         Thread.sleep(100000L);
     }
 }

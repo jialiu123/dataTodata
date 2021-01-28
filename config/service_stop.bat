@@ -1,0 +1,1 @@
+cmd.exe /C start /b wmic process where "commandline like '%%shsc%%'" call terminate

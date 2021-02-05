@@ -1,0 +1,26 @@
+@startuml
+skinparam responseMessageBelowArrow true
+Bob -> Alice : hello
+Alice -> Bob : ok
+
+'修改颜色
+Bob2 -[#red]> Alice2 : hello
+Alice2 -[#0000FF]->Bob2 : ok
+
+
+'各种箭头样式
+
+Bob ->x Alice
+Bob -> Alice
+Bob ->> Alice
+Bob -\ Alice
+Bob \\- Alice
+Bob //-- Alice
+
+Bob ->o Alice
+Bob o\\-- Alice
+
+Bob <-> Alice
+Bob <->o Alice
+
+@enduml

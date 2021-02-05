@@ -1,0 +1,20 @@
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+
+class ArrayList<E> {
+  Object[] elementData
+  void size()
+  +boolean add(E e)
+}
+
+class Dummy {
+ -field1
+ #field2
+ ~method1()
+ +method2()
+ -method3()
+}
+
+@enduml

@@ -1,5 +1,8 @@
 package com.gaga.controller;
 
+import cn.hutool.core.date.DateUnit;
+import cn.hutool.core.date.DateUtil;
+
 /**
  * demo
  *
@@ -36,6 +39,13 @@ public class TestController {
 //            return ResultUtils.error(null);
 //        }
 //    }
+
+
+    public static void main(String[] args) {
+
+        long between = DateUtil.between(DateUtil.parse("20181114"), DateUtil.parse("2018-11-13"), DateUnit.DAY, false);
+        System.out.println(between);
+    }
 
 
 }

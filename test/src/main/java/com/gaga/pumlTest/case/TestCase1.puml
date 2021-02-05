@@ -1,0 +1,8 @@
+@startuml
+"Use the application" as (Use)
+
+:User: --> (Use)
+"Main Admin" as Admin
+
+Admin --> (Admin the application)
+@enduml

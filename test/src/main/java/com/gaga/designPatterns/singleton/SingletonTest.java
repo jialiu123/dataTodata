@@ -31,7 +31,7 @@ class Student {
 
     /**
      * 双重锁作用
-     * 提高效果
+     * 提高synchronized效果
      *
      * @return
      */
@@ -39,7 +39,7 @@ class Student {
 
         if (instance == null) {
             //使用类锁，可能存在一个性能问题，但是影响不大
-            synchronized (Student.class) {
+            synchronized (instance) {
                 if (instance == null) {
                     instance = new Student();
                 }
